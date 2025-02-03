@@ -1,0 +1,21 @@
+.Sidebar{
+    width: 25vw;
+    height: 100vh;
+    background-color: #272626;
+}
+
+.vkladki{
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: #0f0f0f 2px solid;
+}
+
+
+.vkladki a{
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+}
