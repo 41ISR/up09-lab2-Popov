@@ -30,7 +30,7 @@
 }
 
 
-.login-card input[type="submit"]{
+.login-card button{
     all: unset;
     text-align: center;
     margin-top: 2rem;
@@ -42,7 +42,7 @@
     transition: all .2s ease-in-out;
 }
 
-.login-card input[type="submit"]:hover{
+.login-card button:hover{
     background-color: #ffffffc0;
     cursor: pointer;
 }

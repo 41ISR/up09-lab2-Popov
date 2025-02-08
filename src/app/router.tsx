@@ -1,14 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
 import LoginScreen from "../pages/Authorization/LoginScreen"
+import Auth from "../components/Auth/Auth";
+import { URLs } from "./URL";
 import MainScreen from "../pages/MainScreen/MainScreen";
 
 export const router = createBrowserRouter([
     {
-        index: true,
-        element: <LoginScreen />,
+        path: URLs.CHAT,
+        element: <Auth />,
+        children: [{
+            path: URLs.CHAT,
+            element: <MainScreen />
+        }]
     },
     {
-        path: "chat",
-        element: <MainScreen />,
+        path: URLs.LOGIN,
+        element: <LoginScreen />,
     },
 ]);

@@ -1,14 +1,20 @@
 import "./Sidebar.css"
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-    return(
+    return (
         <div className="Sidebar">
             <div className="vkladki">
-                <a href="#">Чаты</a>
-                <a href="#">Контакты</a>
+
+                <Link to={''}>чаты</Link>
+                <Link to={''}>контакты</Link>
             </div>
             <div className="Sidebar-chat">
+            {/* {isChats ? (
+                    <></>
+                ) : (
 
+                )} */}
             </div>
         </div>
     );
@@ -16,4 +22,3 @@ const Sidebar = () => {
 
 export default Sidebar;
 
- 
