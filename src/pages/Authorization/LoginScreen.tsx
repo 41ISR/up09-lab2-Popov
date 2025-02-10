@@ -1,33 +1,42 @@
-import "./LoginScreen.css"
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { UserStore } from '../../shared/zustandStore/UserStore';
+import { URLs } from '../../app/URL';
+import "./LoginScreen.css";
 
 const LoginScreen = () => {
-    const [userID, setUserID] = useState('');
+    const [userID, setUserID] = useState<string>('');
+    const navigate = useNavigate();
+    const setZustandUserID = UserStore(state => state.setUserID);
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const form = event.target as HTMLFormElement; 
-        const newUserId = form.userID.value; 
+        if (userID.trim() !== '') {
+            setZustandUserID(userID);
+            navigate(URLs.CHAT);
 
-        if (newUserId.trim() !== '') {
-            setUserID(newUserId);
+        } else {
+            alert('Пожалуйста, введите ID пользователя.');
         }
     };
-    return(
-        <>
+
+    return (
         <div className="LoginScreen-body">
             <h1>ЭКРАН ВХОДА ЗДЕСЬ</h1>
             <div className="login-card">
                 <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="введите ваш ID" 
-                    value = {userID}
-                    onChange = {e => setUserID(e.target.value)}
-                    name="userID"/>
-                    <button onClick={ () =>{ setUserID }}>Входим..</button>
+                    <input
+                        type="text"
+                        placeholder="введите ваш ID"
+                        value={userID}
+                        onChange={(e) => setUserID(e.target.value)}
+                        name="userID"
+                    />
+                    <button>Входим..</button>
                 </form>
             </div>
         </div>
-        </>
     );
 };
 

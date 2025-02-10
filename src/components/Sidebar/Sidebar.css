@@ -2,6 +2,7 @@
     width: 25vw;
     height: 100vh;
     background-color: #272626;
+    position: relative;
 }
 
 .vkladki{
@@ -18,4 +19,17 @@
     color: white;
     margin: 1rem;
     padding: 1rem;
+}
+
+.user-profile{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.user-profile img{
+    width: 5rem;
+    height: 5rem;
 }

@@ -3,6 +3,7 @@ const ChatTextInput = () => {
         <>
             <form action="">
                 <input type="text" placeholder="Сообщение" />
+                <input type="submit" value='send' />
             </form>
         </>
     );

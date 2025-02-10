@@ -19,18 +19,34 @@
 }
 
 .Message form{
-    width: 60%;
+    width: 80%;
 }
 
 .Message input[type="text"]{
     all: unset;
     background-color: #222121;
     color: rgb(255, 255, 255);
-    width: 100%;
+    width: 80%;
     padding: 1rem;
     margin-left: 1rem;
 }
 
 .ChatMessages{
     text-align: center;
+}
+
+.Message input[type="submit"]{
+    all: unset;
+    background-color: #222121;
+    color: rgb(255, 255, 255);
+    width: 3%;
+    padding: 1rem;
+    margin-left: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+.Message input[type="submit"]:hover{
+    background-color: #383636;
+    color: rgba(255, 255, 255, 0.822);
+    cursor: pointer;
 }
