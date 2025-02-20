@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
-import { URLs } from "../../app/URL";
+import { URLs } from "../../app/router/URL";
 import { UserStore } from "../../shared/zustandStore/UserStore"
 
 const Auth = () => {
@@ -11,7 +11,7 @@ const Auth = () => {
       if (!userID) {
             navigate(URLs.LOGIN)
         }
-        }, []);
+        }, [navigate, userID]);
     return(
         <Outlet />  
     );

@@ -19,7 +19,7 @@
     height: 22rem;
 }
 
-.login-card input[type="text"]{
+.login-card input{
     all: unset;
     margin-top: 5rem;
     background-color: #fff;

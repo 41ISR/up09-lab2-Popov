@@ -1,4 +1,4 @@
 export const URLs = {
     LOGIN: "/login",
-    CHAT: ""
+    CHAT: "/"
 }
